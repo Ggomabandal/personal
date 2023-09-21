@@ -1,0 +1,43 @@
+header {
+  
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(3,3,3,0.3);
+}
+header div.wrap {
+  
+  display: flex;
+  justify-content: end;
+  height: 70px;
+  border-bottom: 1px solid white;
+  padding: 20px 0 20px 0;
+}
+header div.wrap div.subwrap {
+  
+  justify-content: space-between;
+  display: flex;
+  width: 1400px;
+  text-align: center;
+  line-height: 70px;
+}
+header div.wrap div.subwrap h1 {
+  
+  font-size: 40px;
+  color: white;
+}
+header div.wrap div.subwrap ul.gnb {
+  
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}
+header div.wrap div.subwrap ul.gnb li {
+  
+}
+header div.wrap div.subwrap ul.gnb li a {
+  
+  padding: 44px 30px;
+  font-size: 18px;
+  color: white;
+}

@@ -1,0 +1,34 @@
+section#contact {
+  
+  height: 50%;
+}
+section#contact div.wrap {
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  line-height: 1.2;
+  align-items: center;
+}
+section#contact div.wrap h2 {
+  
+}
+section#contact div.wrap ul {
+  
+  font-size: 33px;
+}
+section#contact div.wrap ul li {
+  
+}
+section#contact div.wrap ul li p {
+  
+}
+section#contact div.wrap ul li p span {
+  
+}
+section#contact div.wrap > span {
+  
+  width: 100%;
+  text-align: center;
+}
