@@ -49,7 +49,5 @@
 
 
 ## 작성자 정보
-dlwntjd1017@gmail.com
-
-## 향후 계획 (선택 사항)
-(추가적인 기능 개발, 디자인 개선, 사용자 피드백 수렴 등)
+e-mail : dlwntjd1017@gmail.com
+mobile : 010-3734-1621
