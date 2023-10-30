@@ -44,8 +44,54 @@
             AOS.init();
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $("header div.wrap div.subwrap ul.gnb li:nth-child(1) a").addClass("sectionmark");
+            $("header div.wrap").addClass("top");
+            var ws=$(window).scrollTop(); // 윈도우 창의 스크롤 탑 값을 가져와서 변수 ws에 저장하시오
+            var titleY=$("#title").offset().top;
+            var aboutY=$("#about").offset().top;
+            var skillY=$("#skill").offset().top;
+            var portfolioY=$("#portfolio").offset().top;
+            var contactH=$("#contact").height();
+            var contactY=$("#contact").offset().top-contactH;
+            $(window).scroll(function(){
+                ws=$(window).scrollTop();
+                // 헤더 스타일 변경
+                if(ws<aboutY){
+                $("header div.wrap").removeClass("down");
+                $("header div.wrap").addClass("top");
+                }
+                if(ws>titleY){
+                $("header div.wrap").removeClass("top");
+                $("header div.wrap").addClass("down");
+                }
+                // 헤더 강조
+                if(ws<aboutY){
+                $("header div.wrap div.subwrap ul.gnb li:nth-child(1) a").addClass("sectionmark");
+                $("header div.wrap div.subwrap ul.gnb li a").not("header div.wrap div.subwrap ul.gnb li:nth-child(1) a").removeClass("sectionmark");
+                }
+                if(ws>titleY && ws<skillY){
+                $("header div.wrap div.subwrap ul.gnb li:nth-child(2) a").addClass("sectionmark");
+                $("header div.wrap div.subwrap ul.gnb li a").not("header div.wrap div.subwrap ul.gnb li:nth-child(2) a").removeClass("sectionmark");
+                }
+                if(ws>aboutY && ws<portfolioY){
+                $("header div.wrap div.subwrap ul.gnb li:nth-child(3) a").addClass("sectionmark");
+                $("header div.wrap div.subwrap ul.gnb li a").not("header div.wrap div.subwrap ul.gnb li:nth-child(3) a").removeClass("sectionmark");
+                }
+                if(ws>skillY && ws<contactY){
+                $("header div.wrap div.subwrap ul.gnb li:nth-child(4) a").addClass("sectionmark");
+                $("header div.wrap div.subwrap ul.gnb li a").not("header div.wrap div.subwrap ul.gnb li:nth-child(4) a").removeClass("sectionmark");
+                }
+                if(ws>portfolioY){
+                $("header div.wrap div.subwrap ul.gnb li:nth-child(5) a").addClass("sectionmark");
+                $("header div.wrap div.subwrap ul.gnb li a").not("header div.wrap div.subwrap ul.gnb li:nth-child(5) a").removeClass("sectionmark");
+                }
+            });
+        });
+    </script>
 </head>
-<body style="overflow-y: hidden">
+<body><!--  style="overflow-y: hidden" -->
     <!-- 네비게이션 -->
     <nav>
         <ul class="remote">
@@ -88,8 +134,8 @@
     <main>
         <!-- ABOUT -->
         <section id="about" class="wh100"> 
-            <div class="wrap padding111" data-aos="zoom-in"data-aos-duration="3000">
-                <div class="note">
+            <div class="wrap padding111">
+                <div class="note" data-aos="zoom-in"data-aos-duration="2000">
                     <h2 class="hide">ABOUT</h2>
                     <figure>
                         <img src="https://via.placeholder.com/150" alt="">
@@ -97,15 +143,21 @@
                     </figure>
                     <div class="introduce">
                         <h3 class="h2">PROFILE</h3>
-                        <p><span>NAME</span>이주성</p>
-                        <p><span>BIRTH</span>1992.10.17</p>
+                        <div>
+                            <h4>NAME</h4>
+                            <p>이주성</p>
+                        </div>
+                        <div>
+                            <h4>BIRTH</h4>
+                            <p>1992.10.17</p>
+                        </div>
                         <h4>경력</h4>
                         <ul>
-                            <li>2023</li>
-                            <li>2022</li>
-                            <li>2021</li>
-                            <li>2020</li>
+                            <li>2023-06.09 ~ 2023.10.30 <span class="block">▶ [이젠아이티아카데미]UI/UX 웹디자인 강의 수료</span></li>
+                            <li>2019-01.02 ~ 2020.11.30 <span class="block">▶ 유비케어 경영지원팀 근무</span></li>
+                            <li>2011.02.25 ~ 2018.02.20 <span class="block">▶ 호서대학교 경제학과 졸업</span></li>
                         </ul>
+                        <p>안녕하세요. <span class="block"></span>코딩을 좋아하는 웹퍼블리셔 지망생 이주성 입니다.</p>
                     </div>
                 </div>
             </div>
@@ -151,22 +203,22 @@
                                     HTML5
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 98%;">
+                                <li class="chart__bar" style="width: 96%;">
                                     <span class="chart__label">
-                                    CSS & SCSS
+                                    CSS & Sass
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 72%;">
+                                <li class="chart__bar" style="width: 65%;">
                                     <span class="chart__label">
                                     JavaScript
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 78%;">
+                                <li class="chart__bar" style="width: 82%;">
                                     <span class="chart__label">
                                     jQuery
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 60%;">
+                                <li class="chart__bar" style="width: 74%;">
                                     <span class="chart__label">
                                     웹표준
                                     </span>
@@ -176,12 +228,12 @@
                                     웹접근성
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 74%;">
+                                <li class="chart__bar" style="width: 80%;">
                                     <span class="chart__label">
                                     반응형웹
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 74%;">
+                                <li class="chart__bar" style="width: 75%;">
                                     <span class="chart__label">
                                     검색기능 최적화
                                     </span>
@@ -191,7 +243,7 @@
                                     프레임워크
                                     </span>
                                 </li>
-                                <li class="chart__bar" style="width: 62%;">
+                                <li class="chart__bar" style="width: 60%;">
                                     <span class="chart__label">
                                     vue.is
                                     </span>
@@ -201,12 +253,12 @@
                         <div class="chart chart--prod">
                             <span class="chart__title">Productivity</span>
                             <ul class="chart--horiz">
-                                <li class="chart__bar" style="width: 75%;">
+                                <li class="chart__bar" style="width: 76%;">
                                 <span class="chart__label">
                                     Git & Github
                                 </span>
                                 </li>
-                                <li class="chart__bar" style="width: 80%;">
+                                <li class="chart__bar" style="width: 82%;">
                                 <span class="chart__label">
                                     Microsoft Office
                                 </span>
@@ -216,12 +268,12 @@
                         <div class="chart chart--design">
                             <span class="chart__title">Design</span>
                             <ul class="chart--horiz">
-                                <li class="chart__bar" style="width: 40%;">
+                                <li class="chart__bar" style="width: 55%;">
                                 <span class="chart__label">
                                     Photoshop
                                 </span>
                                 </li>
-                                <li class="chart__bar" style="width: 35%;">
+                                <li class="chart__bar" style="width: 53%;">
                                 <span class="chart__label">
                                     Illustrator
                                 </span>
@@ -239,143 +291,161 @@
         </section>
         <!-- PORTFOLIO -->
         <section id="portfolio" class="gallery wh100">
-            <div class="wrapall padding111">
-                <h2 class="h1">PORTFOLIO</h2>
-                <div class="wrap row">
+            <div class="wrap row padding111">
+                <ul>
                     <a href="#" class="close"></a>
-                    <ul>
-                        <li>
-                            <a href="#item01">
-                                <img src="img/samsung.jpg" alt="">
-                            </a>
-                        </li>
-            
-                        <li>
-                            <a href="#item02">
-                                <img src="img/samsung-re.jpg" alt="">
-                            </a>
-                        </li>
-            
-                        <li>
-                            <a href="#item03">
-                                <img src="img/kai.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item04">
-                                <img src="img/jq&jaba.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item05">
-                                <img src="img/cgv.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item06">
-                                <img src="img/etude.JPG" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item07">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/3148799/technical-book.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item08">
-                                <img src="img/hite.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="image" href="#item08">
-                                <img src="img/yogerpresso.jpg" alt="">
-                            </a>
-                        </li>
-                    </ul>
+                    <li>
+                        <a class="image" href="#item01">
+                            <img src="img/etude.JPG" alt="">
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="image" href="#item02">
+                            <img src="img/cgv.jpg" alt="">
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="image" href="#item03">
+                            <img src="img/yogerpresso.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="image" href="#item04">
+                            <img src="img/kai.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="image" href="#item05">
+                            <img src="img/asan.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="image" href="#item06">
+                            <img src="img/hite.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="image" href="#item07">
+                            <img src="img/samsung.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="image" href="#item08">
+                            <img src="img/samsung-re.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                      <a class="image" href="#item09">
+                          <img src="img/jq&jaba.jpg" alt="">
+                      </a>
+                    </li>
+                </ul>
+            </div> <!-- / row -->
+        
+            <!-- Item 01 -->
+            <div id="item01" class="port">
+                <div class="row">
+                    <div class="description">
+                        <h1>에띠드 클론 홈페이지</h1>
+                        <p>퍼블리싱 : 100%</p>
+                        <p>반응형</p>
+                        <p>Html5,CSS3,Sass,javascript,jquery</p>
+                    </div>     <img src="img/etude.JPG" alt="">
+                    </div>
                 </div> <!-- / row -->
-                <!-- Item 01 -->
-                <div id="item01" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>삼성전자 홈페이지</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 01 -->
-                <!-- Item 02 -->
-                <div id="item02" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>삼성전자 리뉴얼</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                        <img src="img/samsung-re.JPG" alt="">
-                    </div> <!-- / row -->
-                </div> <!-- / Item 02 -->
-                <!-- Item 03 -->
-                <div id="item03" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>한국알콜산업</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 03 -->
-                <!-- Item 04 -->
-                <div id="item04" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>제이쿼리&자바스크립트</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 04 -->
-                <!-- Item 05 -->
-                <div id="item05" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>CGV</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 05 -->
-                <!-- Item 06 -->
-                <div id="item06" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>에뛰드</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 06 -->
-                <!-- Item 07 -->
-                <div id="item07" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>서울아산병원</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 07 -->
-                <!-- Item 08 -->
-                <div id="item08" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>하이트진로</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 08 -->
-                <!-- Item 09 -->
-                <div id="item09" class="port">
-                    <div class="row">
-                        <div class="description">
-                            <h3>요거프레소</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                        </div>
-                    </div> <!-- / row -->
-                </div> <!-- / Item 09 -->
-            </div>
+            </div> <!-- / Item 02 -->
+            <!-- Item 02 -->
+            <div id="item02" class="port">
+                <div class="row">
+                    <div class="description">
+                      <h1>cgv 클론 홈페이지</h1>
+                      <p>퍼블리싱 : 100%</p>
+                      <p>Html5,CSS3,Sass,javascript,jquery</p>
+                    </div>
+                    <img src="img/cgv.jpg" alt="">
+                </div> <!-- / row -->
+            </div> <!-- / Item 02 -->
+            <div id="item03" class="port">
+              <div class="row">
+                  <div class="description">
+                    <h1>요거프레소 클론 홈페이지</h1>
+                    <p>퍼블리싱 : 100%</p>
+                    <p>반응형</p>
+                    <p>Html5,CSS3,Sass,javascript,jquery</p>
+                  </div>
+                  <img src="img/yogerpresso.jpg" alt="">
+              </div> <!-- / row -->
+          </div> <!-- / Item 03 -->
+          <div id="item04" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>한국알콜산업 클론 홈페이지</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                </div>
+                <img src="img/kai.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 04 -->
+          <div id="item05" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>한국알콜산업 클론 홈페이지</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                </div>
+                <img src="img/asan.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 05 -->
+          <div id="item06" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>하이트진로 클론 홈페이지</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                </div>
+                <img src="img/hite.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 06 -->
+          <div id="item07" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>삼성전자 클론 홈페이지</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                </div>
+                <img src="img/samsung.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 07 -->
+          <div id="item08" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>삼성전자 클론 홈페이지 리뉴얼</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                </div>
+                <img src="img/samsung-re.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 08 -->
+          <div id="item09" class="port">
+            <div class="row">
+                <div class="description">
+                  <h1>자바스크립트 개인 학습 홈페이지</h1>
+                  <p>퍼블리싱 : 100%</p>
+                  <p>반응형</p>
+                  <p>Html5,CSS3,Sass,javascript,jquery</p>
+                  <p>개인 학습 홈페이지</p>
+                </div>
+                <img src="img/jq&jaba.jpg" alt="">
+            </div> <!-- / row -->
+          </div> <!-- / Item 09 -->
+        
         </section>
         <!-- CONTACT -->
         <section id="contact" class="wh100">

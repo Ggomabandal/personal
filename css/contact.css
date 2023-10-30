@@ -1,6 +1,7 @@
 section#contact {
   
   height: 50%;
+  background-color: #999;
 }
 section#contact div.wrap {
   
@@ -25,7 +26,9 @@ section#contact div.wrap ul li p {
   
 }
 section#contact div.wrap ul li p span {
-  
+  margin-right: 30px;
+  width: 107px;
+  display: inline-block;
 }
 section#contact div.wrap > span {
   

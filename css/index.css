@@ -4,6 +4,9 @@ html {
 body, html{
     width: 100%;
     height: 100%;
+    background-image: url(../img/title.jpg);
+    z-index: -1;
+    position: relative;
 }
 main{
     height: 100%;
@@ -14,9 +17,11 @@ section#skill{
     height: 100%;
 }
 section#skill div.wrap{
-    background-color: springgreen;
+    background-color: #f0f0f0;
     box-sizing: border-box;
     height: 100%;
+    color: #181818;
+    padding-top: 150px;
 }
 section#skill div.wrap h2{
     text-align: center;
@@ -24,6 +29,7 @@ section#skill div.wrap h2{
 }
 section#portfolio{
     height: 100%;
+    background-color:#808080;
 }
 section#portfolio div.wrapall{
     

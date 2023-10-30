@@ -3,15 +3,14 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-  background-color: rgba(3,3,3,0.3);
 }
 header div.wrap {
   
   display: flex;
   justify-content: end;
   height: 70px;
-  border-bottom: 1px solid white;
-  padding: 20px 0 20px 0;
+  padding: 10px 0 10px 0;
+  transition: all 1s;
 }
 header div.wrap div.subwrap {
   
@@ -37,7 +36,17 @@ header div.wrap div.subwrap ul.gnb li {
 }
 header div.wrap div.subwrap ul.gnb li a {
   
-  padding: 44px 30px;
+  padding: 33px 37px;
   font-size: 18px;
   color: white;
+}
+.sectionmark{
+  background-color: rgba(170,170,170,0.3);
+}
+.down{
+  border-bottom: 1px solid white;
+  background-color: rgba(5,5,5,0.5);  
+}
+.top{
+  background-color: #1E2425;
 }

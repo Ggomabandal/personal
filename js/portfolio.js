@@ -24,4 +24,7 @@ $(document).ready(function(){
         // 클릭한 이미지를 복제해서 추가하시오
         $(this).children().clone().appendTo('#item0'+n+' >.row');
     });
+    $(".gallery ul li a").mouseenter(function(){
+        $().();
+    });
 });

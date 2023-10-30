@@ -21,6 +21,9 @@ nav ul li a {
   display: block;
   border: 1px solid transparent;
   border-radius: 50%;
-  background-color: black;
+  background-color: #1E2425;
   font-size: 0;
+}
+.navcolor{
+  background-color: #e6edf7;
 }

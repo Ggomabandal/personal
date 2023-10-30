@@ -6,6 +6,11 @@ section#about {
 section#about div.wrap {
   
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  background-color: #2B4D8F;
 }
 section#about div.wrap div.note {
 
@@ -13,11 +18,13 @@ section#about div.wrap div.note {
   width: 890px;
   justify-content: center;
   margin: 0 auto;
-  padding: 80px;
+  padding: 70px;
   box-sizing: border-box;
-  background-color: #fff44f;
   height: 716px;
   gap: 50px;
+  background-color: #F5FF9B;
+  align-items: center;
+  border-radius: 50px;
 }
 section#about div.wrap div.note h2.hide {
   
@@ -27,6 +34,8 @@ section#about div.wrap div.note figure {
   height: 450px;
   padding: 20px 20px 0 20px;
   background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 section#about div.wrap div.note figure img {
   
@@ -38,7 +47,13 @@ section#about div.wrap div.note figure img figcaption {
 }
 section#about div.wrap div.note div.introduce {
   
-  width: 40%;
+  height: 450px;
+  width: 50%;
+}
+section#about div.wrap div.note div.introduce>div {
+  
+  display: flex;
+  gap: 12px;
 }
 section#about div.wrap div.note div.introduce h3 {
   
@@ -53,9 +68,26 @@ section#about div.wrap div.note div.introduce p span {
   
   margin-right: 15px;
 }
+section#about div.wrap div.note div.introduce h4 {
+
+  font-size: 25px;
+  line-height: 1.4;
+}
 section#about div.wrap div.note div.introduce ul {
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  line-height: 1.1;
+}
+section#about div.wrap div.note div.introduce p{
   
 }
 section#about div.wrap div.note div.introduce ul li {
   
+  font-size: 16px;
+}
+section#about div.wrap div.note div.introduce ul li span.block{
+  
+  font-size: 14px;
 }
