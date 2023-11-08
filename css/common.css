@@ -9,7 +9,7 @@ body{
   height: 100%
 }
 .wrap{
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;  
 }
 .hide{
@@ -107,6 +107,7 @@ body{
   height: 36px;
   text-align: center;
   line-height: 36px;
+  box-sizing: border-box;
 }
 .moreCir{
   width: 30px;

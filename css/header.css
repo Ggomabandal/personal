@@ -1,52 +1,40 @@
 header {
-  
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  background-color: #1E2425;
 }
 header div.wrap {
-  
-  display: flex;
-  justify-content: end;
-  height: 70px;
-  padding: 10px 0 10px 0;
-  transition: all 1s;
+  height: 80px;
 }
 header div.wrap div.subwrap {
-  
-  justify-content: space-between;
   display: flex;
-  width: 1400px;
-  text-align: center;
-  line-height: 70px;
-}
-header div.wrap div.subwrap h1 {
-  
-  font-size: 40px;
-  color: white;
-}
-header div.wrap div.subwrap ul.gnb {
-  
-  display: flex;
-  width: 700px;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
-header div.wrap div.subwrap ul.gnb li {
+header div.wrap div.subwrap h1.h3 {
   
 }
-header div.wrap div.subwrap ul.gnb li a {
+header div.wrap div.subwrap h1.h3 a {
+  color: wheat;
+}
+header div.wrap div.subwrap ul.visit {
+  display: flex;
+}
+header div.wrap div.subwrap ul.visit li {
   
-  padding: 33px 37px;
-  font-size: 18px;
-  color: white;
 }
-.sectionmark{
-  background-color: rgba(170,170,170,0.3);
+header div.wrap div.subwrap ul.visit li a {
+  color: wheat;
+  width: 85px;
+  height: 60px;
+  display: block;
+  font-size: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.down{
-  border-bottom: 1px solid white;
-  background-color: rgba(5,5,5,0.5);  
+header div.wrap div.subwrap ul.visit li:nth-child(1) a {
+  background-image: url(../img/github.svg);
 }
-.top{
-  background-color: #1E2425;
+header div.wrap div.subwrap ul.visit li:nth-child(2) a {
+  background-image: url(../img/googledrive.svg);
 }

@@ -1,32 +1,67 @@
-div#title {
-  
-  height: 100%;
+div.title {
+  background-color: #FFFFF0;
 }
-div#title div.wrap {
-  
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+div.title div.wrap {
+  height: 845px;
   justify-content: center;
-  line-height: 1.67;
   align-items: center;
-  color: white;
-  overflow: hidden;
-  position: relative;
 }
-div#title div.wrap h2 {
+div.title div.wrap div.welcome {
+  width: 600px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid;
+  box-sizing: border-box;
+  border-color: #3D1B00;
+  background-image: url(../img/titlemenu.jpg);
+  border-right: 1px solid #E5BB93;
+  background-position: left;
+}
+div.title div.wrap div.welcome h2 {
+  text-align: center;
+  line-height: 1.8;
+}
+div.title div.wrap div.menu {
+  width: 600px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid;
+  border-top-color: currentcolor;
+  border-right-width: 7px;
+  border-right-style: solid;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  box-sizing: border-box;
+  border-color: #3D1B00;
+  background-image: url(../img/titlemenu.jpg);
+  border-left: 1px solid #E5BB93;
+  background-position: right;
+}
+div.title div.wrap div.menu ul.gnb {
+  row-gap: 30px;
+}
+div.title div.wrap div.menu ul.gnb li {
   
 }
-div#title div.wrap p {
-  
+div.title div.wrap div.menu ul.gnb li a {
   font-size: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
-div#title div.wrap div.video_wrap{
-
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-div#title div.wrap div.video_wrap video{
-
+div.title div.wrap div.menu ul.gnb li a::before{
+  content: "";
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/coffee.png);
 }
