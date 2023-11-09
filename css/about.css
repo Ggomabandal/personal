@@ -83,13 +83,14 @@ section#about div.wrap div.note div.profile ul.career li{
   
   font-size: 18px;
 }
-section#about div.wrap div.note ul.introduction{
-  height: 220px;
-  margin-top: 60px;
+section#about div.wrap div.note span.introduction{
+  height: 235px;
   width: 35%;
-}
-section#about div.wrap div.note ul.introduction li{
-  
+  background-color: burlywood;
+  border-radius: 20px 0;
+  padding: 30px;
+  box-sizing: border-box;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.4;
+  margin: 50px 0 0 0;
 }
