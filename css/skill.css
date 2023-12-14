@@ -62,7 +62,7 @@ section#skill div.wrap div.contents ul.development li:nth-child(3)::before{
   background-image: url(../img/sass.svg);
 }
 section#skill div.wrap div.contents ul.development li:nth-child(4)::before{
-  background-image: url(../img/javaScript.svg);
+  background-image: url(../img/javascript.svg);
 }
 section#skill div.wrap div.contents ul.development li:nth-child(5)::before{
   background-image: url(../img/jquery.svg);
@@ -97,7 +97,7 @@ section#skill div.wrap div.contents ul.design li:nth-child(1)::before {
   background-image: url(../img/photoshop.svg);
 }
 section#skill div.wrap div.contents ul.design li:nth-child(2)::before {
-  background-image: url(../img/Illustrator.svg);
+  background-image: url(../img/illustrator.svg);
 }
 section#skill div.wrap div.contents ul.design li:nth-child(3)::before {
   background-image: url(../img/coffee.png);
